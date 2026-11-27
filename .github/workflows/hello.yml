@@ -13,4 +13,4 @@ jobs:
         uses: actions/checkout@v7
 
       - name: List the repository files
-        run: ls -laclear
+        run: ls -la
