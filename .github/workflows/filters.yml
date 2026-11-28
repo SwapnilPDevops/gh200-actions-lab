@@ -1,0 +1,21 @@
+name: Filters Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - "release/**"
+      - "!release/**-alpha"
+    
+    tags:
+      - "v*"
+    
+    paths:
+      - "src/**"
+
+jobs:
+  filters:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Filters mached for $GITHUB_REF"
